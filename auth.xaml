@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Diplom1"
         mc:Ignorable="d"
-        Title="auth" Height="532" Width="552" SnapsToDevicePixels="True">
+        Title="auth" Height="540" Width="530" SnapsToDevicePixels="True">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Center" Height="60" Margin="0,157,0,0" VerticalAlignment="Top" Width="300" SnapsToDevicePixels="True"/>
-        <Button Content="Button" HorizontalAlignment="Center" Height="60" Margin="0,256,0,0" VerticalAlignment="Top" Width="300" SnapsToDevicePixels="True"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Height="21" Margin="126,119,0,0" VerticalAlignment="Top" Width="120"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Height="21" Margin="306,119,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Вход" HorizontalAlignment="Center" Height="60" Margin="0,157,0,0" VerticalAlignment="Top" Width="300" SnapsToDevicePixels="True"/>
+        <Button Content="Регистрация" HorizontalAlignment="Center" Height="60" Margin="0,256,0,0" VerticalAlignment="Top" Width="300" SnapsToDevicePixels="True"/>
+        <RadioButton Content="Пользователь" HorizontalAlignment="Left" Height="21" Margin="126,119,0,0" VerticalAlignment="Top" Width="120"/>
+        <RadioButton Content="Админ" HorizontalAlignment="Left" Height="21" Margin="306,119,0,0" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
