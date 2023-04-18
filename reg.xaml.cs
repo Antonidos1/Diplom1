@@ -23,5 +23,13 @@ namespace Diplom1
         {
             InitializeComponent();
         }
+
+        private void reg_auth_button(object sender, RoutedEventArgs e)
+        {
+            auth AuthWindow = new auth();
+            AuthWindow.Show();
+        }
+
+    
     }
 }

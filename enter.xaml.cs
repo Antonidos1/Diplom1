@@ -23,5 +23,15 @@ namespace Diplom1
         {
             InitializeComponent();
         }
+
+        private void enter_main_button(object sender, RoutedEventArgs e)
+        {
+            main1 Main1Window = new main1();
+            Main1Window.Show();
+            
+
+
+
+        }
     }
 }

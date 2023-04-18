@@ -1,0 +1,17 @@
+﻿<Window x:Class="Diplom1.main1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diplom1"
+        mc:Ignorable="d"
+        Title="main1" Height="450" Width="800">
+    <Grid>
+        <ComboBox HorizontalAlignment="Center" Height="40" Margin="0,129,0,0" VerticalAlignment="Top" Width="340"/>
+        <ComboBox HorizontalAlignment="Center" Height="40" Margin="0,217,0,0" VerticalAlignment="Top" Width="340"/>
+        <Button Content="Button" HorizontalAlignment="Center" Height="60" Margin="0,316,0,0" VerticalAlignment="Top" Width="340" Click="select_button"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="20" Margin="589,137,0,0" VerticalAlignment="Top" Width="120"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="20" Margin="589,221,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

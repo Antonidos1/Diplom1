@@ -23,5 +23,19 @@ namespace Diplom1
         {
             InitializeComponent();
         }
+
+        private void Button_reg(object sender, RoutedEventArgs e)
+        {
+            reg RegWindow = new reg();
+            RegWindow.Owner = this;
+            RegWindow.Show();
+        }
+
+        private void Button_enter(object sender, RoutedEventArgs e)
+        {
+            enter EnterWindow = new enter();
+            EnterWindow.Owner = this;
+            EnterWindow.Show();
+        }
     }
 }

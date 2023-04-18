@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="auth" Height="540" Width="530" SnapsToDevicePixels="True">
     <Grid>
-        <Button Content="Вход" HorizontalAlignment="Center" Height="60" Margin="0,157,0,0" VerticalAlignment="Top" Width="300" SnapsToDevicePixels="True"/>
-        <Button Content="Регистрация" HorizontalAlignment="Center" Height="60" Margin="0,256,0,0" VerticalAlignment="Top" Width="300" SnapsToDevicePixels="True"/>
+        <Button Content="Вход" HorizontalAlignment="Center" Height="60" Margin="0,157,0,0" VerticalAlignment="Top" Width="300" SnapsToDevicePixels="True" Click="Button_enter"/>
+        <Button x:Name="button_reg" Content="Регистрация" HorizontalAlignment="Center" Height="60" Margin="0,256,0,0" VerticalAlignment="Top" Width="300" SnapsToDevicePixels="True" Click="Button_reg"/>
         <RadioButton Content="Пользователь" HorizontalAlignment="Left" Height="21" Margin="126,119,0,0" VerticalAlignment="Top" Width="120"/>
         <RadioButton Content="Админ" HorizontalAlignment="Left" Height="21" Margin="306,119,0,0" VerticalAlignment="Top" Width="120"/>
 

@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Diplom1"
         mc:Ignorable="d"
-        Title="reg" Height="250" Width="230" SnapsToDevicePixels="True">
+        Title="reg" Height="250" Width="263" SnapsToDevicePixels="True">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="21,45,0,0" TextWrapping="Wrap" Text="Введите логин" VerticalAlignment="Top" Width="200"/>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="21,95,0,0" TextWrapping="Wrap" Text="Введите пароль" VerticalAlignment="Top" Width="200"/>
-        <Button Content="Зарегистрироваться" HorizontalAlignment="Left" Height="40" Margin="21,162,0,0" VerticalAlignment="Top" Width="200"/>
+        <TextBox HorizontalAlignment="Center" Height="25" Margin="0,42,0,0" TextWrapping="Wrap" Text="Введите логин" VerticalAlignment="Top" Width="200"/>
+        <TextBox HorizontalAlignment="Center" Height="25" Margin="0,92,0,0" TextWrapping="Wrap" Text="Введите пароль" VerticalAlignment="Top" Width="200"/>
+        <Button Content="Зарегистрироваться" HorizontalAlignment="Center" Height="40" Margin="0,150,0,0" VerticalAlignment="Top" Width="200" Click="reg_auth_button"/>
 
     </Grid>
 </Window>

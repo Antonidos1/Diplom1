@@ -15,13 +15,19 @@ using System.Windows.Shapes;
 namespace Diplom1
 {
     /// <summary>
-    /// Логика взаимодействия для main.xaml
+    /// Логика взаимодействия для main1.xaml
     /// </summary>
-    public partial class main : Window
+    public partial class main1 : Window
     {
-        public main()
+        public main1()
         {
             InitializeComponent();
+        }
+
+        private void select_button(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
         }
     }
 }
