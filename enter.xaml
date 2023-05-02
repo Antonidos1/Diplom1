@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="enter" Height="240" Width="230">
     <Grid SnapsToDevicePixels="True">
-        <TextBox HorizontalAlignment="Center" Height="25" Margin="0,51,0,0" TextWrapping="Wrap" Text="Введите логин" VerticalAlignment="Top" Width="200"/>
-        <TextBox HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" Text="Введите пароль" VerticalAlignment="Center" Width="200"/>
+        <TextBox x:Name="enter_log" HorizontalAlignment="Center" Height="25" Margin="0,51,0,0" TextWrapping="Wrap" Text="Введите логин" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="enter_pass" HorizontalAlignment="Center" Height="25" TextWrapping="Wrap" Text="Введите пароль" VerticalAlignment="Center" Width="200"/>
         <Button Content="Войти" HorizontalAlignment="Center" Height="36" Margin="0,151,0,0" VerticalAlignment="Top" Width="200" Click="enter_main_button"/>
 
     </Grid>

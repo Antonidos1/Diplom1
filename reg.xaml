@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="reg" Height="250" Width="263" SnapsToDevicePixels="True">
     <Grid>
-        <TextBox HorizontalAlignment="Center" Height="25" Margin="0,42,0,0" TextWrapping="Wrap" Text="Введите логин" VerticalAlignment="Top" Width="200"/>
-        <TextBox HorizontalAlignment="Center" Height="25" Margin="0,92,0,0" TextWrapping="Wrap" Text="Введите пароль" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="reg_log" HorizontalAlignment="Center" Height="25" Margin="0,42,0,0" TextWrapping="Wrap" Text="Введите логин" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="reg_passw" HorizontalAlignment="Center" Height="25" Margin="0,92,0,0" TextWrapping="Wrap" Text="Введите пароль" VerticalAlignment="Top" Width="200"/>
         <Button Content="Зарегистрироваться" HorizontalAlignment="Center" Height="40" Margin="0,150,0,0" VerticalAlignment="Top" Width="200" Click="reg_auth_button"/>
 
     </Grid>

@@ -24,5 +24,39 @@ namespace Diplom1
         {
             InitializeComponent();
         }
+
+        private void find_city(object sender, RoutedEventArgs e)
+        {
+            using (DiplomBdContext bd = new DiplomBdContext())
+            {
+
+                var city = bd.Organizations.Select(Organization => Organization.City).Distinct().ToList(); //Вывод уникальных городов
+                foreach (var item in city)
+                {
+                    city_box.Items.Add(item);
+                }
+
+            }
+        }
+
+        private void find_indust(object sender, RoutedEventArgs e)
+        {
+            using (DiplomBdContext bd = new DiplomBdContext())
+            {
+
+                var indust = bd.OrgsCodes.Select(OrgCode => OrgCode.CodeName).Distinct().ToList(); //Вывод отраслей
+                foreach (var item2 in indust)
+                {
+                    industry_box.Items.Add(item2);
+                }
+
+            }
+        }
+
+        private void Find(object sender, RoutedEventArgs e)
+        {
+
+
+        }
     }
 }

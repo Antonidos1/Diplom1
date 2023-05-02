@@ -34,8 +34,17 @@ namespace Diplom1
         private void Button_enter(object sender, RoutedEventArgs e)
         {
             enter EnterWindow = new enter();
-            EnterWindow.Owner = this;
+           // EnterWindow.Owner = this;
             EnterWindow.Show();
+            Close();
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //вход без авторизации
+            MainWindow mainwin = new MainWindow();
+            mainwin.Show();
         }
     }
 }

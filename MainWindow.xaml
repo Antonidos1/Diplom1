@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Width="800" SnapsToDevicePixels="True">
-        <ListBox HorizontalAlignment="Left" Height="312" Margin="10,112,0,0" VerticalAlignment="Top" Width="270" d:ItemsSource="{d:SampleData ItemCount=5}" Background="{x:Null}" BorderBrush="{x:Null}" SnapsToDevicePixels="True"/>
-        <ComboBox HorizontalAlignment="Left" Height="22" Margin="20,38,0,0" VerticalAlignment="Top" Width="252" RenderTransformOrigin="0,0" Background="#FFCC1515" SnapsToDevicePixels="True">
+        <ListBox x:Name="main_list" HorizontalAlignment="Left" Height="312" Margin="10,112,0,0" VerticalAlignment="Top" Width="270" d:ItemsSource="{d:SampleData ItemCount=5}" Background="{x:Null}" BorderBrush="{x:Null}" SnapsToDevicePixels="True"/>
+        <ComboBox x:Name="city_box" HorizontalAlignment="Left" Height="22" Margin="20,38,0,0" VerticalAlignment="Top" Width="252" RenderTransformOrigin="0,0" Background="#FFCC1515" SnapsToDevicePixels="True" Loaded="find_city">
             <ComboBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -18,10 +18,11 @@
                 </TransformGroup>
             </ComboBox.RenderTransform>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Height="22" Margin="21,72,0,0" VerticalAlignment="Top" Width="252" SnapsToDevicePixels="True"/>
-        <ListBox HorizontalAlignment="Left" Height="304" Margin="317,112,0,0" VerticalAlignment="Top" Width="444" d:ItemsSource="{d:SampleData ItemCount=5}" Background="{x:Null}" BorderBrush="{x:Null}" SnapsToDevicePixels="True"/>
+        <ComboBox x:Name="industry_box" HorizontalAlignment="Left" Height="22" Margin="304,38,0,0" VerticalAlignment="Top" Width="252" SnapsToDevicePixels="True" Loaded="find_indust"/>
+        <ListBox x:Name="AddInfo_list" HorizontalAlignment="Left" Height="304" Margin="317,112,0,0" VerticalAlignment="Top" Width="444" d:ItemsSource="{d:SampleData ItemCount=5}" Background="{x:Null}" BorderBrush="{x:Null}" SnapsToDevicePixels="True"/>
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="317,92,0,0" VerticalAlignment="Top" IsChecked="False"/>
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="420,92,0,0" VerticalAlignment="Top" IsChecked="False"/>
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="18" Margin="527,92,0,0" VerticalAlignment="Top" Width="78"/>
+        <Button x:Name="find_org" Content="Button" HorizontalAlignment="Left" Height="22" Margin="575,38,0,0" VerticalAlignment="Top" Width="114" Click="Find"/>
     </Grid>
 </Window>

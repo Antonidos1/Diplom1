@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="main1" Height="450" Width="800">
     <Grid>
-        <ComboBox HorizontalAlignment="Center" Height="40" Margin="0,129,0,0" VerticalAlignment="Top" Width="340"/>
-        <ComboBox HorizontalAlignment="Center" Height="40" Margin="0,217,0,0" VerticalAlignment="Top" Width="340"/>
-        <Button Content="Button" HorizontalAlignment="Center" Height="60" Margin="0,316,0,0" VerticalAlignment="Top" Width="340" Click="select_button"/>
+        <ComboBox x:Name="City_list" HorizontalAlignment="Center" Height="40" Margin="0,129,0,0" VerticalAlignment="Top" Width="340" ContextMenuOpening="Find_City" Loaded="city"/>
+        <ComboBox x:Name="Industry_list" HorizontalAlignment="Center" Height="40" Margin="0,217,0,0" VerticalAlignment="Top" Width="340" Loaded="industry"/>
+        <Button Content="Найти" HorizontalAlignment="Center" Height="60" Margin="0,316,0,0" VerticalAlignment="Top" Width="340" Click="select_button"/>
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="20" Margin="589,137,0,0" VerticalAlignment="Top" Width="120"/>
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="20" Margin="589,221,0,0" VerticalAlignment="Top" Width="120"/>
 
