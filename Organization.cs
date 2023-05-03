@@ -7,7 +7,7 @@ public partial class Organization
 {
     public int OrgId { get; set; }
 
-    public int? OrgCode { get; set; }
+    public int? OrgCodes { get; set; }
 
     public string? OrgName { get; set; }
 

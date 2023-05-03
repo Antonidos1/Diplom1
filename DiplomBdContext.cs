@@ -42,7 +42,7 @@ public partial class DiplomBdContext : DbContext
                 .HasMaxLength(50)
                 .HasColumnName("city");
             entity.Property(e => e.DistantCode).HasColumnName("distant_code");
-            entity.Property(e => e.OrgCode).HasColumnName("org_code");
+            entity.Property(e => e.OrgCodes).HasColumnName("org_code");
             entity.Property(e => e.OrgName)
                 .HasMaxLength(250)
                 .HasColumnName("org_name");
@@ -104,6 +104,7 @@ public partial class DiplomBdContext : DbContext
             entity.ToTable("org_code");
 
             entity.Property(e => e.CodeID).HasColumnName("cod_id");
+            entity.Property(e => e.Orgcode).HasColumnName("org_code");
             entity.Property(e => e.CodeName).HasMaxLength(30).HasColumnName("code_name");
 
         });

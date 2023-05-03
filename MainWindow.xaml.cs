@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -55,7 +56,32 @@ namespace Diplom1
 
         private void Find(object sender, RoutedEventArgs e)
         {
+            String? Select_city = city_box.SelectedItem.ToString();
+            String? Select_indust = industry_box.SelectedItem.ToString();
+           
 
+            using (DiplomBdContext bd = new DiplomBdContext())
+            {
+                
+                var List_indust = bd.OrgsCodes.Where(OrgCode => OrgCode.CodeName == Select_indust).ToList();
+                foreach (OrgCode code in List_indust)
+                {
+                    IndItem_box.Clear();
+                    int? ind_list = code.Orgcode;
+                    IndItem_box.Text += ind_list;
+                    
+                    
+                }
+                
+                int Indust_code = Convert.ToInt32(IndItem_box.Text);
+                var List_city = bd.Organizations.Where(Organization => Organization.City == Select_city && Organization.OrgCodes == Indust_code).ToList();
+                city_list.Items.Clear();
+                foreach(Organization org in List_city)
+                {   
+                    city_list.Items.Add(org.OrgName);
+                }
+                
+            }
 
         }
     }
