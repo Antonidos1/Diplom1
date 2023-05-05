@@ -1,0 +1,16 @@
+﻿<Window x:Class="Diplom1.AdminEnter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diplom1"
+        mc:Ignorable="d"
+        Title="AdminEnter" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="Admin_login" HorizontalAlignment="Left" Height="50" Margin="217,133,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="340"/>
+        <TextBox x:Name="Admin_pass" HorizontalAlignment="Left" Height="50" Margin="217,262,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="340"/>
+        <Button x:Name="Admin_enter" Content="Button" HorizontalAlignment="Left" Height="43" Margin="217,358,0,0" VerticalAlignment="Top" Width="339" Background="White" Click="AdminEnter_click"/>
+        <Label Content="Введите данные полученые от системного админстратора" HorizontalAlignment="Left" Height="53" Margin="212,46,0,0" VerticalAlignment="Top" Width="348"/>
+
+    </Grid>
+</Window>

@@ -24,7 +24,8 @@ public partial class DiplomBdContext : DbContext
     public virtual DbSet<UsersStatus> UsersStatuses { get; set; }
 
     public virtual DbSet<OrgCode> OrgsCodes { get; set; }
-
+    public virtual DbSet<addinfo> Addinfos { get; set; }
+    public virtual DbSet<AddFunction> Addfunctions { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 // #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseNpgsql("Host=rc1b-feov1zpxl7wupioe.mdb.yandexcloud.net;Port=6432;Database=diplom_bd;Username=admin1;Password=12345678");
@@ -108,7 +109,35 @@ public partial class DiplomBdContext : DbContext
             entity.Property(e => e.CodeName).HasMaxLength(30).HasColumnName("code_name");
 
         });
-        
+
+        modelBuilder.Entity<addinfo>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("addinfo_pkey");
+
+            entity.ToTable("addinfo");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.OrgId).HasColumnName("org_ig");
+            entity.Property(e => e.InfoCode).HasColumnName("info_code");
+            entity.Property(e => e.MoreInfo).HasMaxLength(3000).HasColumnName("moreinfo");
+            entity.Property(e => e.Addres).HasMaxLength(3000).HasColumnName("addres");
+
+        });
+
+        modelBuilder.Entity<AddFunction>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("add_function_pkey");
+
+            entity.ToTable("add_function");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.UserId).HasColumnName("user_id");
+            entity.Property(e => e.OrgID).HasColumnName("org_id");
+            entity.Property(e => e.Recommend).HasMaxLength(3000).HasColumnName("recommend");
+            entity.Property(e => e.Favor).HasColumnName("favor");
+
+        });
+
         OnModelCreatingPartial(modelBuilder);
     }
 

@@ -1,0 +1,15 @@
+﻿<Window x:Class="Diplom1.SubRec"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diplom1"
+        mc:Ignorable="d"
+        Title="SubRec" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="Rec_Button" Content="Button" HorizontalAlignment="Left" Height="51" Margin="51,356,0,0" VerticalAlignment="Top" Width="660" Click="Sub_click"/>
+        <TextBox x:Name="Rec_text" HorizontalAlignment="Center" Height="281" Margin="0,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="780"/>
+        <Label Content="Введите ваши пожелания или информацию о компаниях,которых еще нет в списке. В будущих обновлениях мы учтем ваши пожелания" HorizontalAlignment="Center" Height="42" Margin="0,10,0,0" VerticalAlignment="Top" Width="780"/>
+
+    </Grid>
+</Window>

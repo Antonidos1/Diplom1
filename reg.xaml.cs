@@ -15,6 +15,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Diplom1
 {
@@ -31,18 +33,37 @@ namespace Diplom1
         private void reg_auth_button(object sender, RoutedEventArgs e)
         {
             String login = reg_log.Text;
-            int password = Convert.ToInt32(reg_passw.Text);
+            String FirstName = FirstName_Box.Text;
+            String LastName = LastName_box.Text;
+            String Email = Email_box.Text;
+            int? Age = Convert.ToInt32(Age_box.Text);
+            int? password = Convert.ToInt32(reg_passw.Text);
+            
 
-            //Зарегестрироваться
-           using(DiplomBdContext bd = new DiplomBdContext())
+            if (login != null && FirstName != null && LastName != null && Email != null && Age != null && password != null)
             {
-                UsersPasswd userPass = new UsersPasswd { StatusCode = 2, Password = password, Login = login};
+                //Зарегестрироваться
+                using (DiplomBdContext bd = new DiplomBdContext())
+                {
+                    //Добавляем логи/пароль
+                    UsersPasswd userPass = new UsersPasswd { StatusCode = 2, Password = password, Login = login };
 
-                bd.UsersPasswds.AddRange(userPass);
-                bd.SaveChanges();
+                    bd.UsersPasswds.AddRange(userPass);
+                    bd.SaveChanges();
+
+                    //Добавляем остальные данные
+                    User adduser = new User { StatusCode = 2, Firstname = FirstName, Lastname = LastName, Email = Email, Age = Age };
+
+                    bd.Users.AddRange(adduser);
+                    bd.SaveChanges();
+
+                 
+                }
+                // Закрыть окно после успешной регистрации
+                MessageBox.Show("Регистрация выполнена");
+                Close();
             }
-          // Закрыть окно после успешной регистрации
-          Close();
+            else MessageBox.Show("Введите все данные для регистарции");
         }
 
 

@@ -26,18 +26,33 @@ namespace Diplom1
 
         private void Button_reg(object sender, RoutedEventArgs e)
         {
-            reg RegWindow = new reg();
-            RegWindow.Owner = this;
-            RegWindow.Show();
+            if (User_RB.IsChecked == true)
+            {
+                reg RegWindow = new reg();
+                //  RegWindow.Owner = this;
+                RegWindow.Show();
+            }
+            if (Admin_RB.IsChecked == true)
+            {
+                MessageBox.Show("Для регистарции нового админа обратитесь к системному администратору");
+            }
         }
 
         private void Button_enter(object sender, RoutedEventArgs e)
         {
-            enter EnterWindow = new enter();
-           // EnterWindow.Owner = this;
-            EnterWindow.Show();
-            Close();
-
+            if (User_RB.IsChecked == true)
+            {
+                enter EnterWindow = new enter();
+                // EnterWindow.Owner = this;
+                EnterWindow.Show();
+                Close();
+            }
+            if (Admin_RB.IsChecked == true)
+            {
+                AdminEnter adminEnter = new AdminEnter();
+                adminEnter.Show();
+                Close();
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

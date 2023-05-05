@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:Diplom1"
         mc:Ignorable="d"
         Title="auth" Height="540" Width="530" SnapsToDevicePixels="True">
-    <Grid>
+    <Grid IsEnabled="False">
         <Button Content="Вход" HorizontalAlignment="Center" Height="60" Margin="0,157,0,0" VerticalAlignment="Top" Width="300" SnapsToDevicePixels="True" Click="Button_enter"/>
         <Button x:Name="button_reg" Content="Регистрация" HorizontalAlignment="Center" Height="60" Margin="0,256,0,0" VerticalAlignment="Top" Width="300" SnapsToDevicePixels="True" Click="Button_reg"/>
-        <RadioButton Content="Пользователь" HorizontalAlignment="Left" Height="21" Margin="126,119,0,0" VerticalAlignment="Top" Width="120"/>
-        <RadioButton Content="Админ" HorizontalAlignment="Left" Height="21" Margin="306,119,0,0" VerticalAlignment="Top" Width="120"/>
+        <RadioButton x:Name="User_RB" Content="Пользователь" HorizontalAlignment="Left" Height="21" Margin="126,119,0,0" VerticalAlignment="Top" Width="120" IsChecked="True"/>
+        <RadioButton x:Name="Admin_RB" Content="Админ" HorizontalAlignment="Left" Height="21" Margin="306,119,0,0" VerticalAlignment="Top" Width="120"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="34" Margin="340,447,0,0" VerticalAlignment="Top" Width="148" Click="Button_Click"/>
 
     </Grid>
