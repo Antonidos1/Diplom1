@@ -371,5 +371,12 @@ namespace Diplom1
                 }
             }
         }
+
+        private void Home_click(object sender, RoutedEventArgs e)
+        {
+            auth auth = new auth();
+            auth.Show();
+            Close();
+        }
     }
 }

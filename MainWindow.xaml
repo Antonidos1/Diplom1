@@ -38,5 +38,6 @@
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,103,0,0" VerticalAlignment="Top" Width="800"/>
         <Button Content="Очистить" HorizontalAlignment="Left" Height="22" Margin="720,317,0,0" VerticalAlignment="Top" Width="64" Click="Button_Click"/>
         <Button Content="Помощь" HorizontalAlignment="Left" Height="22" Margin="662,73,0,0" VerticalAlignment="Top" Width="115" Click="Docks_info"/>
+        <Button x:Name="Home_button" Content="Home" HorizontalAlignment="Left" Height="22" Margin="752,34,0,0" VerticalAlignment="Top" Width="38" Click="Home_click"/>
     </Grid>
 </Window>
