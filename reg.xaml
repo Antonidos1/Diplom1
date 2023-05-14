@@ -9,7 +9,7 @@
     <Grid Margin="10,10,10,21">
         <TextBox x:Name="reg_log" HorizontalAlignment="Left" Height="24" Margin="10,244,0,0" TextWrapping="Wrap" Text="Введите логин" VerticalAlignment="Top" Width="200"/>
         <TextBox x:Name="reg_passw" HorizontalAlignment="Left" Height="25" Margin="248,243,0,0" TextWrapping="Wrap" Text="Введите пароль" VerticalAlignment="Top" Width="200"/>
-        <Button Content="Зарегистрироваться" HorizontalAlignment="Center" Height="40" Margin="0,283,0,0" VerticalAlignment="Top" Width="200" Click="reg_auth_button"/>
+        <Button Content="Зарегистрироваться" HorizontalAlignment="Center" Height="40" Margin="0,283,0,0" VerticalAlignment="Top" Width="200" Click="reg_auth_button" Background="White"/>
         <TextBox x:Name="FirstName_Box" HorizontalAlignment="Left" Height="32" Margin="10,72,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="168"/>
         <TextBox x:Name="LastName_box" HorizontalAlignment="Left" Height="33" Margin="280,72,0,0" TextWrapping="Wrap" Text="Фамилия" VerticalAlignment="Top" Width="168"/>
         <TextBox x:Name="Age_box" HorizontalAlignment="Left" Height="34" Margin="10,0,0,0" TextWrapping="Wrap" Text="Возраст (числом)" VerticalAlignment="Center" Width="168"/>

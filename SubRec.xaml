@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SubRec" Height="450" Width="800">
     <Grid>
-        <Button x:Name="Rec_Button" Content="Button" HorizontalAlignment="Left" Height="51" Margin="51,356,0,0" VerticalAlignment="Top" Width="660" Click="Sub_click"/>
+        <Button x:Name="Rec_Button" Content="Отправить" HorizontalAlignment="Left" Height="51" Margin="51,356,0,0" VerticalAlignment="Top" Width="660" Click="Sub_click" Background="White"/>
         <TextBox x:Name="Rec_text" HorizontalAlignment="Center" Height="281" Margin="0,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="780"/>
         <Label Content="Введите ваши пожелания или информацию о компаниях,которых еще нет в списке. В будущих обновлениях мы учтем ваши пожелания" HorizontalAlignment="Center" Height="42" Margin="0,10,0,0" VerticalAlignment="Top" Width="780"/>
 

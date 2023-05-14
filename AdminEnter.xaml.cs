@@ -36,8 +36,8 @@ namespace Diplom1
                 if (Admin)
                 {
                   
-                    MainWindow mainwin = new MainWindow();
-                    mainwin.Show();
+                    AdminMain adminwin = new AdminMain();
+                    adminwin.Show();
                 }
                 else
                 {

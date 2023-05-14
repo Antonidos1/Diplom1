@@ -87,7 +87,8 @@ namespace Diplom1
 
         private void Bd_click(object sender, RoutedEventArgs e)
         {
-
+            OrgBD orgBD = new OrgBD();
+            orgBD.Show();
         }
     }
 }

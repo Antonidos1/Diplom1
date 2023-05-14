@@ -23,7 +23,7 @@
         <CheckBox x:Name="training_status_check" Content="Есть стажировки" HorizontalAlignment="Left" Margin="22,73,0,0" VerticalAlignment="Top" IsChecked="False" Width="123" Checked="Check_training" Unchecked="Uncheck_training"/>
         <CheckBox x:Name="distant_code_check" Content="Удаленная работа" HorizontalAlignment="Left" Margin="157,73,0,0" VerticalAlignment="Top" IsChecked="False" Width="131" Checked="Check_distant" Unchecked="Uncheck_distant"/>
         <CheckBox x:Name="All_City_check" Content="Выбрать все" HorizontalAlignment="Left" Height="22" Margin="276,38,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.524,0.265" Checked="Check_City"/>
-        <Button x:Name="find_org" Content="Найти" HorizontalAlignment="Left" Height="22" Margin="526,71,0,0" VerticalAlignment="Top" Width="114" Click="Find"/>
+        <Button x:Name="find_org" Content="Найти" HorizontalAlignment="Left" Height="22" Margin="526,71,0,0" VerticalAlignment="Top" Width="114" Click="Find" Background="White"/>
         <TextBox x:Name="IndItem_box" HorizontalAlignment="Left" Height="1" Margin="728,38,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="1"/>
         <TextBox x:Name="Org_id" HorizontalAlignment="Left" Height="1" Margin="733,71,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="1"/>
         <CheckBox x:Name="All_Indust_check" Content="Выбрать все" HorizontalAlignment="Left" Height="22" Margin="645,38,0,0" VerticalAlignment="Top" Width="101"/>
@@ -36,8 +36,8 @@
         <Label Content="Дополнительные возможности" HorizontalAlignment="Left" Height="30" Margin="22,353,0,0" VerticalAlignment="Top" Width="193"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="3,344,0,0" VerticalAlignment="Top" Width="797"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,103,0,0" VerticalAlignment="Top" Width="800"/>
-        <Button Content="Очистить" HorizontalAlignment="Left" Height="22" Margin="720,317,0,0" VerticalAlignment="Top" Width="64" Click="Button_Click"/>
-        <Button Content="Помощь" HorizontalAlignment="Left" Height="22" Margin="662,73,0,0" VerticalAlignment="Top" Width="115" Click="Docks_info"/>
-        <Button x:Name="Home_button" Content="Home" HorizontalAlignment="Left" Height="22" Margin="752,34,0,0" VerticalAlignment="Top" Width="38" Click="Home_click"/>
+        <Button Content="Очистить" HorizontalAlignment="Left" Height="22" Margin="720,317,0,0" VerticalAlignment="Top" Width="64" Click="Button_Click" Background="White"/>
+        <Button Content="Помощь" HorizontalAlignment="Left" Height="22" Margin="662,73,0,0" VerticalAlignment="Top" Width="115" Click="Docks_info" Background="White"/>
+        <Button x:Name="Home_button" Content="Home" HorizontalAlignment="Left" Height="22" Margin="752,34,0,0" VerticalAlignment="Top" Width="38" Click="Home_click" Background="White"/>
     </Grid>
 </Window>
