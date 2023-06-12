@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="DocxText" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="TextDoc" HorizontalAlignment="Center" Height="402" Margin="0,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="780" Loaded="DocText"/>
+        <TextBox x:Name="TextDoc" HorizontalAlignment="Center" Height="434" TextWrapping="Wrap"  VerticalAlignment="Center" Width="800" Loaded="DocText">
+            <TextBox.Background>
+                <ImageBrush ImageSource="/back2.png"/>
+            </TextBox.Background>
+        </TextBox>
 
     </Grid>
 </Window>

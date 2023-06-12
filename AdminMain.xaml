@@ -6,15 +6,102 @@
         xmlns:local="clr-namespace:Diplom1"
         mc:Ignorable="d"
         Title="AdminMain" Height="352" Width="800">
-    <Grid Margin="10,0,10,20">
-        <Button x:Name="Main_button" Content="Открыть основную страницу" HorizontalAlignment="Left" Height="33" Margin="591,273,0,0" VerticalAlignment="Top" Width="182" Background="#FFFDFDFD" Click="Main_click"/>
-        <Button x:Name="BD_button" Content="БД" HorizontalAlignment="Left" Height="46" Margin="10,112,0,0" VerticalAlignment="Top" Width="189" Background="#FFFDFDFD" Click="Bd_click"/>
-        <Button x:Name="UserInfo_button" Content="Инфа о пользователях" HorizontalAlignment="Left" Height="46" Margin="273,112,0,0" VerticalAlignment="Top" Width="217" Background="White" Click="Info_click"/>
-        <Button x:Name="UserPas_button" Content="Логин/Пароль пользователей" HorizontalAlignment="Left" Height="46" Margin="544,107,0,0" VerticalAlignment="Top" Width="229" Background="White" Click="UserPas_click"/>
-        <Button x:Name="Recomend_button" Content="Отправленные пожелания" HorizontalAlignment="Left" Height="40" Margin="10,213,0,0" VerticalAlignment="Top" Width="189" Background="White" Click="Button_Click"/>
-        <Button x:Name="Favor_button" Content="Список компаний в избранном" HorizontalAlignment="Left" Height="45" Margin="273,208,0,0" VerticalAlignment="Top" Width="217" Background="#FFFDFDFD" Click="Favor_click"/>
-        <Button x:Name="Doc_button" Content="Изменить документацию" HorizontalAlignment="Left" Height="45" Margin="544,203,0,0" VerticalAlignment="Top" Width="229" Background="White" Click="Doc_click"/>
-        <Label Content="Панель админских возможностей" HorizontalAlignment="Left" Height="30" Margin="283,36,0,0" VerticalAlignment="Top" Width="197"/>
+    <Grid Margin="0,0,0,-6">
+        <Grid.Background>
+            <ImageBrush ImageSource="/back2.png"/>
+        </Grid.Background>
+        <Button x:Name="Main_button" Content="Открыть основную страницу" HorizontalAlignment="Left" Height="33" Margin="591,273,0,0" VerticalAlignment="Top" Width="182"  Click="Main_click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1F5CAF" Offset="0.014"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="7"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="BD_button" Content="БД" HorizontalAlignment="Left" Height="46" Margin="10,112,0,0" VerticalAlignment="Top" Width="189"  Click="Bd_click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1F5CAF" Offset="0.014"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="UserInfo_button" Content="Инфа о пользователях" HorizontalAlignment="Left" Height="46" Margin="273,112,0,0" VerticalAlignment="Top" Width="217" Click="Info_click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1F5CAF" Offset="0.014"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="UserPas_button" Content="Логин/Пароль пользователей" HorizontalAlignment="Left" Height="46" Margin="544,107,0,0" VerticalAlignment="Top" Width="229" Click="UserPas_click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1F5CAF" Offset="0.014"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Recomend_button" Content="Отправленные пожелания" HorizontalAlignment="Left" Height="40" Margin="10,213,0,0" VerticalAlignment="Top" Width="189" Click="Button_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1F5CAF" Offset="0.014"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Favor_button" Content="Список компаний в избранном" HorizontalAlignment="Left" Height="45" Margin="273,208,0,0" VerticalAlignment="Top" Width="217" Click="Favor_click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1F5CAF" Offset="0.014"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Doc_button" Content="Изменить документацию" HorizontalAlignment="Left" Height="45" Margin="544,203,0,0" VerticalAlignment="Top" Width="229" Click="Doc_click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1F5CAF" Offset="0.014"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label Content="Панель админских возможностей" HorizontalAlignment="Center" Height="42" Margin="0,33,0,0" VerticalAlignment="Top" Width="308" FontSize="18"/>
 
     </Grid>
 </Window>

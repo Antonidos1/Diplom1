@@ -28,7 +28,7 @@ public partial class DiplomBdContext : DbContext
     public virtual DbSet<AddFunction> Addfunctions { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 // #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseNpgsql("Host=rc1b-feov1zpxl7wupioe.mdb.yandexcloud.net;Port=6432;Database=diplom_bd;Username=admin1;Password=12345678");
+        => optionsBuilder.UseNpgsql("Host=rc1b-tedf5g2vl4ivc4me.mdb.yandexcloud.net;Port=6432;Database=diplom_bd;Username=admin1;Password=12345678");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,47 +48,39 @@ namespace Diplom1
         {
             using (DiplomBdContext bd = new DiplomBdContext())
             {
-                var Favor_list = bd.Addfunctions.Select(adf => adf.Favor).ToList();
+                var Favor_list = bd.Addfunctions.Select(adf => adf.OrgID).Distinct().ToList();
                 foreach (var favor in Favor_list)
                 {
-
-                    MessageBox.Show(Convert.ToString(favor));
+                    string fv = $@"id компании:{favor}\n";
+                    MessageBox.Show(Convert.ToString(fv));
                 }
             }
         }
 
         private void Doc_click(object sender, RoutedEventArgs e)
         {
-
+            String path = "E:\\Diplom\\Diplom1\\docx.txt";
+            Process.Start("notepad.exe", path);
         }
 
         private void UserPas_click(object sender, RoutedEventArgs e)
         {
-            using (DiplomBdContext bd = new DiplomBdContext())
-            {
-                var UserPas_list = bd.UsersPasswds.Where(usep => usep.StatusCode == 2).ToList();
-                foreach (UsersPasswd up in UserPas_list)
-                {
-                    MessageBox.Show($@"Логин пользователя {up.Login} Пароль пользователя {up.Password}\n");
-                }
-            }
+            UserPaswdBD pasBD = new UserPaswdBD();
+            pasBD.Owner = this;
+            pasBD.Show();
         }
 
         private void Info_click(object sender, RoutedEventArgs e)
         {
-            using (DiplomBdContext bd = new DiplomBdContext())
-            {
-                var User_list = bd.Users.Where(us => us.StatusCode == 2).ToList();
-                foreach (User us in User_list)
-                {
-                    MessageBox.Show($@"Имя {us.Firstname} Фамилия {us.Lastname} Email {us.Email} Возраст {us.Age}\n");
-                }
-            }
+            UserBD userBD = new UserBD();
+            userBD.Owner = this;
+            userBD.Show();
         }
 
         private void Bd_click(object sender, RoutedEventArgs e)
         {
             OrgBD orgBD = new OrgBD();
+            orgBD.Owner = this;
             orgBD.Show();
         }
     }

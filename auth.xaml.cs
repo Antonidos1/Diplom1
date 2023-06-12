@@ -66,11 +66,7 @@ namespace Diplom1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Андреев М.Д. ИВТ-92");
-            /*
-            //вход без авторизации
-            MainWindow mainwin = new MainWindow();
-            mainwin.Show();
-            */
+          
         }
 
         private void Doc_open(object sender, RoutedEventArgs e)

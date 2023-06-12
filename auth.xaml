@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Diplom1"
         mc:Ignorable="d"
-        Title="auth" Height="540" Width="530" SnapsToDevicePixels="True">
-    <Grid IsEnabled="True" Margin="0,0,0,6">
+        Title="auth" Height="Auto" Width="Auto" >
+    <Grid IsEnabled="True" Margin="0,0,0,-6"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
         <Grid.Background>
-            <ImageBrush ImageSource="/mainback.png" TileMode="FlipX" Stretch="None" Opacity="1">
+            <ImageBrush ImageSource="/back2.png" TileMode="None" Stretch="Fill" Opacity="1">
                 <ImageBrush.RelativeTransform>
                     <TransformGroup>
                         <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="1" ScaleY="1"/>
@@ -19,45 +19,65 @@
                 </ImageBrush.RelativeTransform>
             </ImageBrush>
         </Grid.Background>
-        <Button Content="Вход" HorizontalAlignment="Center" Height="68" Margin="0,200,0,0" VerticalAlignment="Top" Width="300" SnapsToDevicePixels="True" Click="Button_enter" OpacityMask="Black" BorderBrush="#FF0022CB">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF15620B" Offset="1"/>
-                    <GradientStop Color="#FF62C604" Offset="0.698"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button x:Name="button_reg" Content="Регистрация" HorizontalAlignment="Center" Height="69" Margin="0,317,0,0" VerticalAlignment="Top" Width="300" SnapsToDevicePixels="True" Click="Button_reg">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFCE0F0F"/>
-                    <GradientStop Color="#FF421313" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <RadioButton x:Name="User_RB" Content="Пользователь" HorizontalAlignment="Left" Height="24" Margin="126,127,0,0" VerticalAlignment="Top" Width="120" IsChecked="True"/>
-        <RadioButton x:Name="Admin_RB" Content="Админ" HorizontalAlignment="Left" Height="21" Margin="316,127,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.496,0.907"/>
-        <Button Content="О разработчике" HorizontalAlignment="Left" Height="34" Margin="340,447,0,0" VerticalAlignment="Top" Width="148" Click="Button_Click">
+        <Button Content="Вход" Height="68" Margin="114,182,116,280" Width="300"  Click="Button_enter" OpacityMask="Black" BorderBrush="#FF0022CB" FontSize="16" FontWeight="Bold"  >
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF1F5CAF" Offset="0.014"/>
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"></Setter>
+                </Style>
+            </Button.Resources>
         </Button>
-        <Button x:Name="Docs_button" Content="Документация" HorizontalAlignment="Left" Height="34" Margin="33,447,0,0" VerticalAlignment="Top" Width="132" Click="Doc_open">
+        <Button x:Name="button_reg" Content="Регистрация" Height="69" Margin="114,310,116,151" Width="300"  Click="Button_reg" BorderBrush="#FF0C0000" FontWeight="Bold" FontSize="16">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF1F5CAF" Offset="0.014"/>
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"></Setter>
+                </Style>
+            </Button.Resources>
         </Button>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,424,0,0" VerticalAlignment="Top" Width="530"/>
-        <Label Content="HEFINJ" HorizontalAlignment="Center" Height="32" Margin="0,26,0,0" VerticalAlignment="Top" Width="79" Foreground="#FF00FF19" FontSize="18" FontWeight="Bold"/>
-        <Label Content="Приложение для помощи в трудоустройстве" HorizontalAlignment="Center" Height="34" Margin="0,58,0,0" VerticalAlignment="Top" Width="270"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,92,0,0" VerticalAlignment="Top" Width="530"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="98" Margin="0,426,0,0" VerticalAlignment="Top" Width="1"/>
+        <RadioButton x:Name="User_RB" Content="Пользователь" Height="Auto" Margin="132,130,287,382" Width="Auto" IsChecked="True" FontSize="18" Padding="4,-5,0,0" />
+        <RadioButton x:Name="Admin_RB" Content="Админ" Height="Auto" Margin="332,130,133,382" Width="Auto" RenderTransformOrigin="0.496,0.907" FontSize="18" Padding="4,-5,0,0" />
+        <Button Content="О разработчике" Height="34" Margin="337,464,45,32" Width="148" Click="Button_Click" BorderBrush="#FF020000" FontSize="14" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1F5CAF" Offset="0.014"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Docs_button" Content="Документация" Height="34" Margin="66,464,332,32" Width="132" Click="Doc_open" BorderBrush="#FF110000" FontSize="14" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1F5CAF" Offset="0.014"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Border BorderBrush="Black" BorderThickness="1" Height="1" Margin="0,429,0,100" Width="Auto" />
+        <Label Content="HEFINJ" Height="32" Margin="224,21,226,477" Width="79" Foreground="#FF00FF19" FontSize="18" FontWeight="Bold" />
+        <Label Content="Приложение для помощи в трудоустройстве" Height="34" Margin="112,60,113,437" FontSize="16" />
+        <Border BorderBrush="Black" BorderThickness="1" Margin="5,94,5,435" Width="Auto" Height="1" />
+        <Border BorderBrush="Black" BorderThickness="1" Height="Auto" Margin="264,436,264,0" Width="1" />
 
     </Grid>
 </Window>
