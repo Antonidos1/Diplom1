@@ -49,5 +49,31 @@ namespace Diplom1
             }
             Close();
         }
+
+        private void admin_log(object sender, RoutedEventArgs e)
+        {
+            Admin_login.Text = "Логин";
+        }
+
+        private void Admin_pas(object sender, RoutedEventArgs e)
+        {
+            Admin_pass.Text = "Пароль";
+        }
+
+        private void enter_pas(object sender, MouseEventArgs e)
+        {
+            if (Admin_pass.Text == "Пароль")
+            {
+                Admin_pass.Text = " ";
+            }
+        }
+
+        private void Enter_log(object sender, MouseEventArgs e)
+        {
+            if (Admin_login.Text == "Логин")
+            {
+                Admin_login.Text = " ";
+            }
+        }
     }
 }

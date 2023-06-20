@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Diplom1"
         mc:Ignorable="d"
-        Title="SubRec" Height="450" Width="800">
+        Title="SubRec" Height="450" Width="800" WindowStartupLocation ="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/back2.png"/>
@@ -23,7 +23,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <TextBox x:Name="Rec_text" HorizontalAlignment="Center" Height="281" Margin="0,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="780">
+        <TextBox x:Name="Rec_text" HorizontalAlignment="Center" Height="281" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="780">
             <TextBox.Background>
                 <ImageBrush/>
             </TextBox.Background>

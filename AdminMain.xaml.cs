@@ -36,7 +36,7 @@ namespace Diplom1
         {
             using (DiplomBdContext bd = new DiplomBdContext())
             {
-                var Recomend_list = bd.Addfunctions.Select(adf => adf.Recommend).ToList();
+                var Recomend_list = bd.Addfunctions.Select(adf => adf.Recommend).Distinct().ToList();
                 foreach (var recomend in Recomend_list)
                 {
                     MessageBox.Show(recomend);
@@ -48,12 +48,17 @@ namespace Diplom1
         {
             using (DiplomBdContext bd = new DiplomBdContext())
             {
-                var Favor_list = bd.Addfunctions.Select(adf => adf.OrgID).Distinct().ToList();
+                
+                var Favor_list = bd.Addfunctions.Select(adf => adf.OrgID).ToList();
                 foreach (var favor in Favor_list)
                 {
-                    string fv = $@"id компании:{favor}\n";
-                    MessageBox.Show(Convert.ToString(fv));
+                    if (favor != null)
+                    {
+                        string fv = $@"id компании:{favor}" + "\n";
+                        favor_text.Text += fv;
+                    }
                 }
+                    MessageBox.Show("Статистика добавления компаний в избранное:" + "\n" + Convert.ToString(favor_text.Text));
             }
         }
 

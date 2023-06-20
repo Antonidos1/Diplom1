@@ -60,13 +60,15 @@ namespace Diplom1
 
         private void Find(object sender, RoutedEventArgs e)
         {
-            using (DiplomBdContext bd = new DiplomBdContext())
+            try
             {
-
-                if (All_City_check.IsChecked == false && All_Indust_check.IsChecked == false)
+                using (DiplomBdContext bd = new DiplomBdContext())
                 {
-                    String? Select_city = city_box.SelectedItem.ToString();
-                    String? Select_indust = industry_box.SelectedItem.ToString();
+
+                    if (All_City_check.IsChecked == false && All_Indust_check.IsChecked == false)
+                    {
+                        String? Select_city = city_box.SelectedItem.ToString();
+                        String? Select_indust = industry_box.SelectedItem.ToString();
 
                         // Получить код отрасли по имени
                         var List_indust = bd.OrgsCodes.Where(OrgCode => OrgCode.CodeName == Select_indust).ToList();
@@ -87,12 +89,12 @@ namespace Diplom1
                             city_list.Items.Add(org.OrgName);
                         }
 
-                    
-                }
-                if (All_City_check.IsChecked == true && All_Indust_check.IsChecked == false)
-                {
-                    String? Select_indust = industry_box.SelectedItem.ToString();
-                    
+
+                    }
+                    if (All_City_check.IsChecked == true && All_Indust_check.IsChecked == false)
+                    {
+                        String? Select_indust = industry_box.SelectedItem.ToString();
+
 
                         // Получить код отрасли по имени
                         var List_indust = bd.OrgsCodes.Where(OrgCode => OrgCode.CodeName == Select_indust).ToList();
@@ -111,28 +113,33 @@ namespace Diplom1
                         {
                             city_list.Items.Add(org.OrgName);
                         }
-                    
-                }
-                if (All_Indust_check.IsChecked == true && All_City_check.IsChecked == false)
-                {
-                    String? Select_city = city_box.SelectedItem.ToString();
-                    var AllIndust = bd.Organizations.Where(Organization => Organization.City == Select_city).ToList();
-                    city_list.Items.Clear();
-                    foreach (Organization o in AllIndust)
-                    {
-                        city_list.Items.Add(o.OrgName);
-                    }
 
-                }
-                if (All_Indust_check.IsChecked == true && All_City_check.IsChecked == true)
-                {
-                    var All = bd.Organizations.Select(Organization => Organization.OrgName).ToList();
-                    city_list.Items.Clear();
-                    foreach (var i in All)
+                    }
+                    if (All_Indust_check.IsChecked == true && All_City_check.IsChecked == false)
                     {
-                        city_list.Items.Add(i);
+                        String? Select_city = city_box.SelectedItem.ToString();
+                        var AllIndust = bd.Organizations.Where(Organization => Organization.City == Select_city).ToList();
+                        city_list.Items.Clear();
+                        foreach (Organization o in AllIndust)
+                        {
+                            city_list.Items.Add(o.OrgName);
+                        }
+
+                    }
+                    if (All_Indust_check.IsChecked == true && All_City_check.IsChecked == true)
+                    {
+                        var All = bd.Organizations.Select(Organization => Organization.OrgName).ToList();
+                        city_list.Items.Clear();
+                        foreach (var i in All)
+                        {
+                            city_list.Items.Add(i);
+                        }
                     }
                 }
+            }
+            catch
+            {
+                MessageBox.Show("Произошла ошибка, повторите попытку");
             }
         }
 

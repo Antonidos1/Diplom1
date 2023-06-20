@@ -46,7 +46,8 @@ namespace Diplom1
 
         private void Button_enter(object sender, RoutedEventArgs e)
         {
-           if (User_RB.IsChecked == true)
+         
+            if (User_RB.IsChecked == true)
             {
                 enter EnterWindow = new enter();
                 // EnterWindow.Owner = this;

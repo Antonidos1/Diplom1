@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Diplom1"
         mc:Ignorable="d"
-        Title="auth" Height="Auto" Width="Auto" >
+        Title="auth" Height="580" Width="600" WindowStartupLocation ="CenterScreen" >
     <Grid IsEnabled="True" Margin="0,0,0,-6"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
         <Grid.Background>
             <ImageBrush ImageSource="/back2.png" TileMode="None" Stretch="Fill" Opacity="1">
@@ -19,7 +19,7 @@
                 </ImageBrush.RelativeTransform>
             </ImageBrush>
         </Grid.Background>
-        <Button Content="Вход" Height="68" Margin="114,182,116,280" Width="300"  Click="Button_enter" OpacityMask="Black" BorderBrush="#FF0022CB" FontSize="16" FontWeight="Bold"  >
+        <Button Content="Вход" Height="69" Margin="114,182,116,280" Width="300"  Click="Button_enter" OpacityMask="Black" BorderBrush="#FF0022CB" FontSize="16" FontWeight="Bold"  >
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF1F5CAF" Offset="0.014"/>
@@ -45,8 +45,8 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <RadioButton x:Name="User_RB" Content="Пользователь" Height="Auto" Margin="132,130,287,382" Width="Auto" IsChecked="True" FontSize="18" Padding="4,-5,0,0" />
-        <RadioButton x:Name="Admin_RB" Content="Админ" Height="Auto" Margin="332,130,133,382" Width="Auto" RenderTransformOrigin="0.496,0.907" FontSize="18" Padding="4,-5,0,0" />
+        <RadioButton x:Name="User_RB" Content="Пользователь" Height="30" Margin="132,130,287,382" Width="150" IsChecked="True" FontSize="18" />
+        <RadioButton x:Name="Admin_RB" Content="Админ" Height="30" Margin="332,130,133,382" Width="100"  FontSize="18" />
         <Button Content="О разработчике" Height="34" Margin="337,464,45,32" Width="148" Click="Button_Click" BorderBrush="#FF020000" FontSize="14" >
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -74,10 +74,10 @@
             </Button.Resources>
         </Button>
         <Border BorderBrush="Black" BorderThickness="1" Height="1" Margin="0,429,0,100" Width="Auto" />
-        <Label Content="HEFINJ" Height="32" Margin="224,21,226,477" Width="79" Foreground="#FF00FF19" FontSize="18" FontWeight="Bold" />
-        <Label Content="Приложение для помощи в трудоустройстве" Height="34" Margin="112,60,113,437" FontSize="16" />
+        <Label Content="HEFINJ" Height="32" Margin="224,21,226,477" Width="79" Foreground="#FF00FF19" FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <Label Content="Приложение для помощи в трудоустройстве" Height="34" Margin="112,60,113,437" Width="350" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
         <Border BorderBrush="Black" BorderThickness="1" Margin="5,94,5,435" Width="Auto" Height="1" />
-        <Border BorderBrush="Black" BorderThickness="1" Height="Auto" Margin="264,436,264,0" Width="1" />
+        <Border BorderBrush="Black" BorderThickness="1" Height="Auto" Margin="264,436,264,0" Width="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
     </Grid>
 </Window>

@@ -5,22 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Diplom1"
         mc:Ignorable="d"
-        Title="reg" Height="370" Width="478" SnapsToDevicePixels="True">
-    <Grid Margin="0,0,0,-6">
+        Title="reg" Height="370" Width="478" SnapsToDevicePixels="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" WindowStartupLocation ="CenterScreen">
+    <Grid Margin="0,0,0,-6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.Background>
             <ImageBrush ImageSource="/back2.png"/>
         </Grid.Background>
-        <TextBox x:Name="reg_log" HorizontalAlignment="Left" Height="24" Margin="10,244,0,0" TextWrapping="Wrap" Text="Введите логин" VerticalAlignment="Top" Width="200" Foreground="Black" BorderBrush="#FF000103">
+        <TextBox x:Name="reg_log" HorizontalAlignment="Left" Height="24" Margin="10,244,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="200" Foreground="Black" BorderBrush="#FF000103" Loaded="load_login" MouseEnter="enter_log">
             <TextBox.Background>
                 <ImageBrush/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="reg_passw" HorizontalAlignment="Left" Height="25" Margin="248,243,0,0" TextWrapping="Wrap" Text="Введите пароль" VerticalAlignment="Top" Width="200" BorderBrush="#FF00040E" Foreground="Black">
+        <TextBox x:Name="reg_passw" HorizontalAlignment="Left" Height="25" Margin="248,243,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="200" BorderBrush="#FF00040E" Foreground="Black" Loaded="load_pas" MouseEnter="enter_pas">
             <TextBox.Background>
                 <ImageBrush/>
             </TextBox.Background>
         </TextBox>
-        <Button Content="Зарегистрироваться" HorizontalAlignment="Center" Height="40" Margin="0,283,0,0" VerticalAlignment="Top" Width="200" Click="reg_auth_button" FontSize="14" >
+        <Button Content="Зарегистрироваться" Height="40" Margin="0,283,0,0" Width="200" Click="reg_auth_button" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" >
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF1F5CAF" Offset="0.014"/>
@@ -32,23 +32,23 @@
                     <Setter Property="CornerRadius" Value="10"></Setter>
                 </Style>
             </Button.Resources>
-            </Button>
-                <TextBox x:Name="FirstName_Box" HorizontalAlignment="Left" Height="32" Margin="10,72,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="168" BorderBrush="Black">
+        </Button>
+        <TextBox x:Name="FirstName_Box" HorizontalAlignment="Left" Height="32" Margin="10,73,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="168" BorderBrush="Black" Loaded="load_name" MouseEnter="enter_name">
             <TextBox.Background>
                 <ImageBrush/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="LastName_box" HorizontalAlignment="Left" Height="33" Margin="280,72,0,0" TextWrapping="Wrap" Text="Фамилия" VerticalAlignment="Top" Width="168" BorderBrush="Black">
+        <TextBox x:Name="LastName_box" HorizontalAlignment="Left" Height="33" Margin="280,72,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="168" BorderBrush="Black" Loaded="load_lastname" MouseEnter="enter_lastname">
             <TextBox.Background>
                 <ImageBrush/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="Age_box" HorizontalAlignment="Left" Height="34" Margin="10,0,0,0" TextWrapping="Wrap" Text="Возраст (числом)" VerticalAlignment="Center" Width="168" BorderBrush="Black">
+        <TextBox x:Name="Age_box" HorizontalAlignment="Left" Height="34" Margin="10,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Center" Width="168" BorderBrush="Black" Loaded="load_age" MouseEnter="enter_age">
             <TextBox.Background>
                 <ImageBrush/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="Email_box" HorizontalAlignment="Left" Height="34" Margin="280,0,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Center" Width="168" BorderBrush="Black">
+        <TextBox x:Name="Email_box" HorizontalAlignment="Left" Height="34" Margin="280,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="168" BorderBrush="Black" Loaded="Form_Loaded" MouseLeftButtonDown="Enter_text" MouseEnter="enter">
             <TextBox.Background>
                 <ImageBrush/>
             </TextBox.Background>

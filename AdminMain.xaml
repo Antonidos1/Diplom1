@@ -102,6 +102,7 @@
             </Button.Resources>
         </Button>
         <Label Content="Панель админских возможностей" HorizontalAlignment="Center" Height="42" Margin="0,33,0,0" VerticalAlignment="Top" Width="308" FontSize="18"/>
+        <TextBox x:Name="favor_text" HorizontalAlignment="Left" Height="1" Margin="688,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="1"/>
 
     </Grid>
 </Window>

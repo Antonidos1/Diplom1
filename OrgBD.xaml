@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Diplom1"
         mc:Ignorable="d"
-        Title="OrgBD" Height="450" Width="800">
+        Title="OrgBD" Height="450" Width="800" WindowStartupLocation ="CenterScreen">
     <Grid>
-        <DataGrid x:Name="OrgGrid" HorizontalAlignment="Center" Height="466" VerticalAlignment="Center" Width="800" AutoGenerateColumns="True" Loaded="OrgList" CellEditEnding="EditBD" >
+        <DataGrid x:Name="OrgGrid" HorizontalAlignment="Center" ItemsSource="{Binding}" Height="466" VerticalAlignment="Center" Width="800" AutoGenerateColumns="True" Loaded="OrgList" CellEditEnding="EditBD" >
             <DataGrid.Background>
                 <ImageBrush ImageSource="/back2.png"/>
             </DataGrid.Background>

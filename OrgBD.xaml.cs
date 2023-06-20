@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,12 +37,25 @@ namespace Diplom1
 
         private void EditBD(object sender, DataGridCellEditEndingEventArgs e)
         {
-            using (DiplomBdContext bd = new DiplomBdContext())
-            {
-                Organization o = e.Row.Item as Organization;
-                bd.Organizations.Update(o);
-                bd.SaveChanges();
-            }
+            
+                using (DiplomBdContext bd = new DiplomBdContext())
+                {
+
+
+                /*
+                    OrgGrid.CancelEdit();
+                    OrgGrid.CancelEdit();
+                    OrgGrid.Items.Refresh();
+                    Organization p = e.Row.Item as OrgList;
+                    bd.Organizations.Update(p);
+                    bd.SaveChanges();
+
+                */
+                MessageBox.Show("Ой, что-то пошло не так, повторите попытку позже");
+
+
+                }
+          
         }
 
        

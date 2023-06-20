@@ -29,53 +29,84 @@ namespace Diplom1
 
         private void enter_main_button(object sender, RoutedEventArgs e)
         {
-
+           try
+            {
             String login = enter_log.Text;
             int password = Convert.ToInt32(enter_pass.Text);
             String path = "E:\\Diplom\\Diplom1\\Log.txt";
 
-
-
-            using (DiplomBdContext bd = new DiplomBdContext())
-            {
-                
-                bool users = bd.UsersPasswds.Any(UsersPasswd => UsersPasswd.StatusCode == 2 && UsersPasswd.Login == $@"{login}" && UsersPasswd.Password == password); // Проверяем логин/пароль
-                
-                if (users)
-                {
-                    var LogUser = bd.UsersPasswds.Where(u => u.Login == login && u.Password == password).ToList();
-                    var FileStream = File.Open(path, FileMode.Open); 
-                    FileStream.SetLength(0);
-                    FileStream.Close();
-                    foreach (UsersPasswd up in LogUser)
-                    {
-                        int userID = up.UserId;
-                        StreamWriter sw = new StreamWriter(path);
-                       
-                        sw.WriteLine(userID);
-                        sw.Close();
-                    }
-
-                    MainWindow mainwin = new MainWindow();
-                    mainwin.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Неверный логин/пароль");
-                    auth AuthWin = new auth();
-                    AuthWin.Show();
-                }
-                    
             
 
+                using (DiplomBdContext bd = new DiplomBdContext())
+                {
+
+                    bool users = bd.UsersPasswds.Any(UsersPasswd => UsersPasswd.StatusCode == 2 && UsersPasswd.Login == $@"{login}" && UsersPasswd.Password == password); // Проверяем логин/пароль
+
+                    if (users)
+                    {
+                        var LogUser = bd.UsersPasswds.Where(u => u.Login == login && u.Password == password).ToList();
+                        var FileStream = File.Open(path, FileMode.Open);
+                        FileStream.SetLength(0);
+                        FileStream.Close();
+                        foreach (UsersPasswd up in LogUser)
+                        {
+                            int userID = up.UserId;
+                            StreamWriter sw = new StreamWriter(path);
+
+                            sw.WriteLine(userID);
+                            sw.Close();
+                        }
+
+                        MainWindow mainwin = new MainWindow();
+                        mainwin.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неверный логин/пароль");
+                        auth AuthWin = new auth();
+                        AuthWin.Show();
+                    }
+
+
+
+                }
+
+                //Закрываем старые
+                Close();
+
+            }
+            catch
+            {
+                MessageBox.Show("Неверные данные");
             }
 
-            //Закрываем старые
-            Close();
-        
 
+        }
 
+        private void log_enter(object sender, RoutedEventArgs e)
+        {
+            enter_log.Text = "Введите логин";
+        }
 
+        private void log_vvod(object sender, MouseEventArgs e)
+        {
+            if (enter_log.Text == "Введите логин")
+            {
+                enter_log.Text = " ";
+            }
+        }
+
+        private void pas_load(object sender, RoutedEventArgs e)
+        {
+            enter_pass.Text = "Введите пароль";
+        }
+
+        private void pas_enter(object sender, MouseEventArgs e)
+        {
+            if (enter_pass.Text == "Введите пароль")
+            {
+                enter_pass.Text = " ";
+            }
         }
     }
 }

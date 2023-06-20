@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Diplom1"
         mc:Ignorable="d"
-        Title="AdminEnter" Height="483" Width="514">
+        Title="AdminEnter" Height="483" Width="514" WindowStartupLocation ="CenterScreen">
     <Grid Margin="0,0,0,-6" HorizontalAlignment="Center" Width="514">
         <Grid.Background>
             <ImageBrush ImageSource="/back2.png"/>
         </Grid.Background>
-        <TextBox x:Name="Admin_login" HorizontalAlignment="Center" Height="29" Margin="0,135,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="340" BorderBrush="#FF000103" FontSize="16">
+        <TextBox x:Name="Admin_login" HorizontalAlignment="Center" Height="29" Margin="0,135,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="340" BorderBrush="#FF000103" FontSize="16" Loaded="admin_log" MouseEnter="Enter_log">
             <TextBox.Background>
                 <ImageBrush/>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="Admin_pass" HorizontalAlignment="Center" Height="31" Margin="0,227,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="340" BorderBrush="#FF000105" FontSize="16">
+        <TextBox x:Name="Admin_pass" HorizontalAlignment="Center" Height="31" Margin="0,227,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="340" BorderBrush="#FF000105" FontSize="16" Loaded="Admin_pas" MouseEnter="enter_pas">
             <TextBox.Background>
                 <ImageBrush/>
             </TextBox.Background>
